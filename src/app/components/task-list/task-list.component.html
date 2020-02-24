@@ -1,5 +1,7 @@
 <div>
-
+    <h1>
+        {{name}}'s Task List
+    </h1>    
     <button (click)="showTaskForm()">Add Task</button>
     <div *ngIf="showForm">
         <input #taskName placeholder="Input task name." type="text" name="task-name">

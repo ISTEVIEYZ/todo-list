@@ -1,15 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-task-list',
     templateUrl: './task-list.component.html',
     styleUrls: ['./task-list.component.css']
 })
-export class TaskListComponent {
+export class TaskListComponent implements OnInit {
     taskData = [];
     showForm = false;
+    name = "";
 
-    constructor() {
+    constructor(private activatedRoute: ActivatedRoute) {
+    }
+
+    ngOnInit() {
+        this.activatedRoute.params.subscribe((params) => {
+            this.name = params.name;
+           
+        });
     }
 
     showTaskForm() {
