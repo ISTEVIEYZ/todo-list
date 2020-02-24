@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.row{
+    width: 100%;
+}
+
+.column-left{
+    width: 48%;
+    text-align:left;
+    float: left;
+}
+
+.column-right{
+    width: 48%;
+    text-align: right;
+    float: right;
+}
